@@ -9,7 +9,20 @@ import com.examly.springapp.repository.TasksRepository;
 public class TasksService {
     @Autowired
     TasksRepository tasksRepository;
+    public List<Task> getAllTasks(){
+        return (List<Task>) tasksRepository.findAll();
+    } 
+    public Task getTaskById(String taskId){
+        return tasksRepository.findById(taskId).orElse(null);
+    }
+    public vote saveTask(Task task){
+        tasksRepository.save(task);
+    }
+    public void delete(String taskId){
+        tasksRepository.deleteById(taskId);
+    }
     
+
 
 
 
