@@ -1,6 +1,3 @@
-public public class TaskController {
-    
-}
- TaskController {
+public class TaskController {
     
 }
