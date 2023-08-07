@@ -1,7 +1,8 @@
 package com.examly.springapp.repository;
 
-import 
+import org.springframework.data.repository.CrudRepository;
+import com.examly.springapp.model.Task;
 
-public class TasksRepository {
+public interface TasksRepository extends CrudRepository<Task,String>{
     
 }
