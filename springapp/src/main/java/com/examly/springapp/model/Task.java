@@ -19,6 +19,29 @@ public class Task {
     private String taskStatus;
 
     public String getTaskId(){
-        
+        return taskId;
     }
+    public String getTaskHolderName(){
+        return taskHolderName;
+    }
+    public String getTaskStatus(){
+        return taskStatus;
+    }
+    public String getTaskData(){
+        return taskData;
+    }
+
+    public void setTaskId(String taskId){
+        this.taskId=taskId;
+    }
+    public void setTaskHolderName(String taskHolderName){
+        this.taskHolderName=taskHolderName;
+    }
+    public void setTaskStatus(String taskStatus){
+        this.taskStatus=taskStatus;
+    }
+    public void setTaskData(String taskData){
+        this.taskData=taskData;
+    }
+    
 }
