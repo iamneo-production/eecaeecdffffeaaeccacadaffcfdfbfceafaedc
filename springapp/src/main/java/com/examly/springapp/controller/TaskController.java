@@ -29,5 +29,20 @@ public class TaskController {
         return tasksService.getTaskById(taskId);
     }
 
-    @DeleteMapping("/deleteTa")
+    @DeleteMapping("/deleteTask/{taskId}")
+    public void deleteTask(@PathVariable("taskId") String taskId){
+        tasksService.delete(taskId);
+    }
+
+    @PostMapping("saveTask")
+    public String saveTask(@RequestBody Task task){
+        tasksService.saveTask(task);
+        return task.getTaskId();
+    }
+
+    @PutMapping("/changeStatus")
+    public Task updateTaskStatus(@RequestBody Task task){
+        tasksService.updateTaskStatus(task);
+        return task;
+    }
 }
